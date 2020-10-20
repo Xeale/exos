@@ -5,7 +5,8 @@
  */
 
 function doubleInt(int) {
-
+    let ret = int*2;
+    return ret;
 }
 
 
