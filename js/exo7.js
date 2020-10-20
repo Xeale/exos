@@ -11,7 +11,16 @@
  */
 
 function getExtension(str) {
-
+    let ret;
+    if(str.indexOf(".") == -1)
+    {
+        ret = false;
+    }
+    else
+    {
+        ret = str.split(".")[str.split(".").length -1];
+    }
+    return ret;
 }
 
 
