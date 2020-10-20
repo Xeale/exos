@@ -11,10 +11,20 @@
  */
 
 function getLongestString(arr) {
-
+    let ret = null;
+    for (let elem of arr)
+    {
+        if( ret == null || ret.length < elem.length)
+        {
+            ret = elem;
+        }
+    }
+    if(ret == null)
+    {
+        ret = false;
+    }
+    return ret;
 }
-
-
 
 // Stop ! Tests, on ne touche pas :P
 check.exo8(getLongestString);
