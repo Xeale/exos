@@ -32,9 +32,30 @@ require_once '../inc/functions.php';
  *
  */
 
+session_start();
+
 
 function checkStrings() {
+    foreach($_SESSION['dirty_strings'] as $dirt)
+    {
+        if(filter_var($dirt, FILTER_VALIDATE_URL) == false)
+        {
 
+        }
+        else
+        {
+            $_SESSION['clean_urls'][] = filter_var($dirt, FILTER_VALIDATE_URL);
+        }
+
+        if(filter_var($dirt, FILTER_VALIDATE_EMAIL) == false)
+        {
+
+        }
+        else{
+            $_SESSION['clean_emails'][] = filter_var($dirt, FILTER_VALIDATE_EMAIL);
+        }
+        
+    }
 }
 
 
