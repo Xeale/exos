@@ -12,10 +12,17 @@
 
 
 function sum(arr) {
-
+    let tempRet = 0;
+    let tempArr = arr.flat(Infinity);
+    for(let elem of tempArr)
+    {
+        if(typeof elem == "number")
+        {
+            tempRet += elem;
+        }
+    }
+    return tempRet;
 }
-
-
 
 // Stop ! Tests, on ne touche pas :P
 check.exo9(sum);
