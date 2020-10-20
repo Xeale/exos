@@ -6,3 +6,11 @@
  *      on additionne les deux nombres.
  * 3. On affiche le résultat dans #result
  */
+
+function calculate()
+{
+    if(document.querySelector("#input1").value != "" && document.querySelector("#input2").value != "")
+    {
+        document.querySelector("#result").innerHTML = parseInt(document.querySelector("#input1").value) + parseInt(document.querySelector("#input2").value);
+    }
+}
