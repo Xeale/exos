@@ -4,3 +4,8 @@
  * 2. À la soumission du formulaire, on additionne les deux nombres,
  * 3. On affiche le résultat dans #result.
  */
+
+function calculate()
+{
+    document.querySelector("#result").innerHTML = parseInt(document.querySelector("#input1").value) + parseInt(document.querySelector("#input2").value);
+}
