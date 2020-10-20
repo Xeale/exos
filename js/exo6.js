@@ -5,7 +5,13 @@
  */
 
 function isEven(int) {
-
+    let temp = int;
+    let truth = false;
+    if(temp%2 == 0)
+    {
+        truth = true;
+    }
+    return truth;
 }
 
 
